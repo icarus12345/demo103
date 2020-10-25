@@ -1,0 +1,247 @@
+
+
+
+/*===========================
+       05.SERVICES css 
+===========================*/
+
+.service_area{
+    position: relative;
+    z-index: 9;
+}
+
+.single_services{
+    padding: 80px 40px;
+    position: relative;
+    z-index: 5;
+    width: 100%;
+    overflow: hidden;
+    
+    @media #{$lg}{
+        padding: 50px 30px;
+    }
+    @media #{$xs}{
+        padding: 40px 18px;
+    }
+    
+    &::before{
+        position: absolute;
+        content: '';
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        opacity: 0.1;
+        z-index: -1;
+        @include transition(0.3s);
+    }
+    
+    & .services_icon{
+        
+    }
+    & .services_content{
+        margin-top: 20px;
+        max-width: 290px;
+        margin-left: auto;
+        margin-right: auto;
+        
+        & .services_title{
+            & a{
+                font-size: 26px;
+                color: $white;
+                font-weight: 400;
+                @include transition(0.3s);
+            }
+        }
+        & p{
+            color: $white;
+            margin-top: 15px;
+        }
+    }
+    
+    &.active{
+        padding-top: 110px;
+        padding-bottom: 110px;
+        margin-top: -30px;
+        
+        @media #{$lg}{
+            padding-top: 80px;
+            padding-bottom: 80px;
+        }
+        
+        @media #{$md}{
+            margin-top: 0;
+            padding: 80px 40px;
+        }
+        @media #{$xs}{
+            margin-top: 0;
+            padding: 80px 40px;
+        }
+    }
+    &.active_2{
+        padding-top: 110px;
+        margin-top: -30px;
+        margin-bottom: -30px;
+        
+        @media #{$lg}{
+            padding-top: 80px;
+            padding-bottom: 50px;
+        }
+        
+        @media #{$md}{
+            margin-top: 0;
+            padding: 80px 40px;
+        }
+        @media #{$xs}{
+            margin-top: 0;
+            padding: 80px 40px;
+        }
+    }
+    
+    &.services_1{
+        background-color: #9238a4;
+        
+        &::before{
+            background-image: url(../images/services-1.jpg);
+        }
+    }
+    
+    &.services_2{
+        background-color: #f86048;
+        
+        &::before{
+            background-image: url(../images/services-2.jpg);
+        }
+    }
+    
+    &.services_3{
+        background-color: #00bdc0;
+        
+        &::before{
+            background-image: url(../images/services-3.jpg);
+        }
+    }
+    
+    &.services_4{
+        background-color: #f1ae44;
+        
+        &::before{
+            background-image: url(../images/services-1.jpg);
+        }
+    }
+    
+    &:hover{
+        &::before{
+            @include transform(scale(1.1));
+        }
+    }
+}
+
+
+/*===== Services 2 =====*/
+
+.services_area_2{
+    position: relative;
+}
+
+.services_shape_1{
+    height: 73px;
+    width: 100%;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: -30px;
+    left: 0;
+    z-index: 6;
+}
+.services_shape_2{
+    height: 73px;
+    width: 100%;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    bottom: -40px;
+    left: 0;
+    z-index: 9;
+}
+
+
+.single_services_2{
+    
+    & .services_image{
+        overflow: hidden;
+        position: relative;
+        
+        & a{
+            display: block;
+            width: 100%;
+            
+            & img{
+                width: 100%;
+                @include transition(0.3s);
+            }
+        }
+    }
+    & .services_content{
+        padding: 45px 30px;
+        
+        @media #{$lg}{
+            padding: 25px 30px;
+        }
+        @media #{$xs}{
+            padding: 25px 30px;
+        }
+        @media #{$sm}{
+            padding: 45px 30px;
+        }
+        
+        & .services_title{
+            & a{
+                color: $white;
+                font-size: 26px;
+
+                @media #{$lg}{
+                    font-size: 24px;
+                }
+                @media #{$xs}{
+                    font-size: 24px;
+                }
+                @media #{$sm}{
+                    font-size: 24px;
+                }
+
+            }
+        }
+        & p{
+            color: $white;
+            margin-top: 15px;
+        }
+    }
+    
+    
+    &.services_2_color_1{
+        background-color: #9238a4;
+    }
+    &.services_2_color_2{
+        background-color: #f1ae44;
+    }
+    &.services_2_color_3{
+        background-color: #00bdc0;
+    }
+    
+    &:hover{
+        & .services_image{
+            & img{
+                @include transform(scale(1.1));
+            }
+        }
+    }
+}
+
+
+

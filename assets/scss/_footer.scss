@@ -1,0 +1,345 @@
+
+
+
+/*===========================
+      13.FOOTER css 
+===========================*/
+
+.footer_area{
+    background-color: #1a191f;
+    position: relative;
+    
+    &::before{
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-image: url(../images/shape/footer_shape.png);
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    
+    & .footer_title{
+        font-size: 16px;
+        font-weight: 400;
+        font-family: $font-1;
+        color: $white;
+    }
+}
+
+.footer_about{
+    & p{
+        margin-top: 15px;
+        color: #9f9f9f;
+        
+        & span{
+            font-weight: 600;
+            color: $white;
+            margin-right: 5px;
+        }
+    }
+    
+    & .social{
+        padding-top: 15px;
+        
+        & li{
+            display: inline-block;
+            margin-right: 18px;
+            
+            & a{
+                font-size: 24px;
+                color: #9f9f9f;
+                @include transition(0.3s);
+                
+                &:hover{
+                    color: $theme-color;
+                }
+            }
+        }
+    }
+}
+
+
+.footer_link{
+    width: 50%;
+    padding-left: 0px;
+    
+    @media #{$lg}{
+        padding-left: 60px;
+    }
+    @media #{$xs}{
+        padding-left: 0;
+    }
+    
+    & .link{
+        padding-top: 5px;
+        
+        & li{
+            margin-top: 12px;
+            
+            & a{
+                font-size: 16px;
+                color: #9f9f9f;
+                @include transition(0.3s);
+                
+                &:hover{
+                    color: $theme-color;
+                }
+            }
+        }
+    }
+}
+
+.footer_link_wrapper{
+    .footer_link{
+        &:first-child{
+            
+        }
+    }
+}
+
+.footer_subscribe{
+    
+    & p{
+        margin-top: 25px;
+        color: #9f9f9f;
+    }
+    
+    & .subscribe_form{
+        position: relative;
+        margin-top: 25px;
+        
+        & input{
+            width: 100%;
+            border: 0;
+            border-radius: 5px;
+            height: 50px;
+            padding: 0 20px;
+            font-size: 15px;
+            color: $body-color;
+        }
+        & button{
+            width: 40px;
+            height: 40px;
+            font-size: 20px;
+            background-color: $theme-color;
+            color: $white;
+            @include transition(0.3s);
+            border: 0;
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            border-radius: 5px;
+        }
+    }
+}
+
+
+.footer_copyright{
+    & .copyright{
+        padding: 25px 0;
+        border-top: 1px solid rgba($white, 0.3);
+        
+        & p{
+            color: $white;
+        }
+    }
+}
+
+
+
+
+
+/*===== Go Top =====*/
+
+
+.go-top-area{
+    position: relative;
+    z-index: 9999;
+    
+    & .go-top{
+        position: fixed;
+        cursor: pointer;
+        top: 0;
+        right: 24px;
+        color: #ffffff;
+        background-color: $theme-color;
+        z-index: 9999;
+        width: 40px;
+        text-align: center;
+        height: 42px;
+        line-height: 42px;
+        opacity: 0;
+        visibility: hidden;
+        @include transition(0.9s);
+        border-right: 0;
+        
+        & i{
+            position: absolute;
+            top: 50%;
+            left: -4px;
+            right: 0;
+            margin: 0 auto;
+            font-size: 15px;
+            @include transform(translateY(-50%));
+            @include transition(0.5s);
+            
+            &:last-child{
+                opacity: 0;
+                visibility: hidden;
+                top: 60%;
+            }
+        }
+        
+        &::before{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background-color: $theme-color;
+            opacity: 0;
+            visibility: hidden;
+            @include transition(0.5s);
+        }
+        
+        &:focus,
+        &:hover{
+            color: $white;
+            
+            &::before{
+                opacity: 1;
+                visibility: visible;
+            }
+            
+            & i{
+                &:first-child{
+                    opacity: 0;
+                    top: 0;
+                    visibility: hidden;
+                }
+                &:last-child{
+                    opacity: 1;
+                    visibility: visible;
+                    top: 50%;
+                }
+            }
+        }
+        
+        &.active{
+            top: 98%;
+            @include transform(translateY(-98%));
+            opacity: 1;
+            visibility: visible;
+            border-radius: 0;
+            right: 20px;
+            @media #{$lg} {
+                top: 93%;
+            }
+            @media #{$md} {
+                top: 93%;
+            }
+        }
+    }
+}
+
+
+.go-top-wrap {
+    position: relative;
+    
+    & .go-top-btn {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        color: $white;
+        top: 3px;
+        z-index: 1;
+        background: $theme-color;
+        
+        & i{
+            font-size: 20px;
+            font-weight: 700;
+            padding-left: 4px;
+            color: $white;
+        }
+        
+        &::after{
+            z-index: -1;
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 40px;
+            height: 40px;
+            @include animation(ripple 1.6s ease-out infinite);
+            opacity: 0;
+            background: $theme-color;
+        }
+        
+        &:hover{
+            background-color: $black;
+            color: $white;
+        }
+    }
+}
+
+@keyframes ripple {
+  0%, 35% {
+    @include transform(scale(0));
+    opacity: 1;
+  }
+  50% {
+    @include transform(scale(1.5));
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 0;
+    @include transform(scale(2));
+  }
+}
+
+@-webkit-keyframes ripple {
+  0%, 35% {
+    @include transform(scale(0));
+    opacity: 1;
+  }
+  50% {
+    @include transform(scale(1.5));
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 0;
+    @include transform(scale(2));
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

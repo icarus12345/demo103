@@ -1,0 +1,89 @@
+.director{
+    background:#A4E0FC;
+    border:2px solid #ffba00;
+}
+.division{
+    background:#E8F7E9;
+    border:2px solid #ffba00;
+}
+
+.title{
+    font-size: 1.125em;
+    font-weight: bold;
+    color: #000;
+}
+
+.phone{
+    color:blue;
+}
+.area1,
+.area2,
+.area3,
+.area4 {
+  text-align: left;
+  padding: 0;
+}
+.area1 .title,
+.area1 .person,
+.area2 .title,
+.area2 .person,
+.area3 .title,
+.area3 .person,
+.area4 .title,
+.area4 .person {
+  padding: 0.5em;
+}
+
+.area1 .title,.area1 {
+  	background: #ed1c24;
+  	color: #fff;
+    text-align: center;
+ 	text-transform: UPPERCASE;
+}
+.area1 .person {
+	background: #fff;
+	color: #000;
+	text-align: center;
+	text-transform: UPPERCASE;
+}
+
+.area2 .title,.area2 {
+  	background: #00aeef;
+  	color: #fff;
+  	text-align: center;
+ 	text-transform: UPPERCASE;
+}
+.area2 .person {
+  	background: #fff;
+  	color: #000;
+  	text-align: center;
+ 	text-transform: UPPERCASE;
+}
+
+.area3 .title,.area3 {
+  	background: #00a651;
+  	color: #fff;
+ 	text-align: center;
+ 	text-transform: UPPERCASE;
+}
+.area3 .person {
+  	background: #fff;
+  	color: #000;
+  	text-align: center;
+ 	text-transform: UPPERCASE;
+}
+
+.area4 .title,.area4 {
+  	background: #953ea7;
+  	color: #fff;
+ 	text-align: center;
+ 	text-transform: UPPERCASE;
+}
+.area4 .person {
+  	background: #fff;
+  	color: #000;
+  	text-align: center;
+ 	text-transform: UPPERCASE;
+}
+}
+

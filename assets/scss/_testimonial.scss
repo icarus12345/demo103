@@ -1,0 +1,266 @@
+
+
+
+/*===========================
+      09.TESTIMONIAL css 
+===========================*/
+
+.testimonial_area{
+    position: relative;
+}
+
+.testimonial_content_area{
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    left: 0;
+    @include transform(translateY(-50%));
+}
+
+.testimonial_image_wrapper{}
+
+.single_testimonial_image{
+    & img{
+        width: 100%;
+        
+        @media #{$lg}{
+            height: 618px;
+            object-fit: cover;
+            object-position: center;
+        }
+        @media #{$xs}{
+            height: 618px;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+}
+
+
+.testimonial_content_wrapper_2,
+.testimonial_content_wrapper{
+    & .slick-dots{
+        text-align: center;
+        width: 100%;
+        margin-top: 20px;
+        
+        & li{
+            display: inline-block;
+            margin: 0 5px;
+            
+            & button{
+                font-size: 0;
+                padding: 0;
+                width: 13px;
+                height: 13px;
+                border: 1px solid $white;
+                background: none;
+                border-radius: 50%;
+                @include transition(0.3s);
+            }
+            
+            &.slick-active{
+                & button{
+                    background-color: $white;
+                }
+            }
+        }
+    }
+}
+
+.single_testimonial_content{
+    background-color: $theme-color;
+    padding: 75px 55px 55px;
+    border-radius: 50px;
+    position: relative;
+    margin-top: 30px;
+    position: relative;
+    z-index: 5;
+    
+    
+    &::before{
+        position: absolute;
+        content: '';
+        width: 50%;
+        height: 100%;
+        background-image: url(../images/shape/shape-3.png);
+        top: 0;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        z-index: -1;
+        background-size: cover;
+        background-position: center center;
+        
+        @media #{$xs}{
+            width: 100%;
+        }
+        @media #{$sm}{
+            width: 50%;
+        }
+    }
+    
+    @media #{$xs}{
+        padding: 45px 25px 35px;
+    }
+    
+    & i{
+        font-size: 60px;
+        color: $white;
+        position: absolute;
+        top: -22px;
+        left: 50%;
+        @include transform(translateX(-50%));
+        
+        @media #{$xs}{
+            font-size: 40px;
+            top: -18px;
+        }
+    }
+    & .testimonial_title{
+        color: $white;
+        font-size: 30px;
+        font-weight: 400;
+        
+        @media #{$xs}{
+            font-size: 24px;
+        }
+    }
+    & p{
+        font-size: 18px;
+        font-style: italic;
+        color: $white;
+        line-height: 30px;
+        margin-top: 15px;
+        
+        @media #{$xs}{
+            font-size: 16px;
+        }
+    }
+    & .author_name{
+        color: $white;
+        font-size: 16px;
+        font-weight: 700;
+        font-family: $font-2;
+        margin-top: 15px;
+    }
+}
+
+
+/*===== Testimonial 2 =====*/
+
+.single_testimonial_image_2{
+    & img{
+        height: 660px;
+        object-fit: cover;
+        width: 100%;
+        object-position: center;
+    }
+}
+
+
+/*===== Testimonial 3 =====*/
+
+.testimonial_area_3{
+    position: relative;
+    z-index: 5;
+    
+    &::before{
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+}
+
+.testimonial_area_active_3{
+    
+}
+
+.single_testimonial_3{
+    & i{
+        font-size: 60px;
+        color: $theme-color;
+    }
+    & .testimonial_title{
+        font-size: 48px;
+        color: $white;
+        font-weight: 400;
+        
+        @media #{$xs}{
+            font-size: 28px;
+        }
+    }
+    & p{
+        font-size: 24px;
+        color: $white;
+        margin-top: 55px;
+        line-height: 36px;
+        font-style: italic;
+        
+        @media #{$xs}{
+            font-size: 16px;
+            line-height: 28px;
+        }
+    }
+    & .name{
+        font-size: 18px;
+        color: $white;
+        font-family: $font-2;
+        color: $white;
+        margin-top: 20px;
+        font-weight: 700;
+    }
+}
+
+.testimonial_area_active_3{
+    & .slick-dots{
+        text-align: center;
+        width: 100%;
+        margin-top: 20px;
+        
+        & li{
+            display: inline-block;
+            margin: 0 5px;
+            
+            & button{
+                font-size: 0;
+                padding: 0;
+                width: 13px;
+                height: 13px;
+                border: 1px solid $white;
+                background: none;
+                border-radius: 50%;
+                @include transition(0.3s);
+            }
+            
+            &.slick-active{
+                & button{
+                    background-color: $white;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

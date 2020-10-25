@@ -1,0 +1,59 @@
+/*-----------------------------------------------------------------------------------
+
+    Template Name: Helpgrove - HTML Template for Charity
+    Template URI: site.com
+    Description: Helpgrove - HTML Template for Charity
+    Author: Pixelcurve
+    Author URI: https://wpsprite.com/
+    Version: 1.0
+
+-----------------------------------------------------------------------------------
+
+    CSS INDEX
+    ===================
+
+    01. Theme default CSS
+    02.HEADER
+    03.SLIDER
+    04.ABOUT
+    05.SERVICES
+    06.VIDEO
+    07.CAMPAING
+    08.CAUSES
+    09.TESTIMONIAL
+    10.VOLUNTEER
+    11.EVENT
+    12.BLOG
+    13.FOOTER
+    14.FEATUEE
+    15.HELPING
+    16.PAGE BANNER
+    17.CAUSES DETAILS
+    18.SIDEBAR
+    19.BLOG PAGE
+    20.CONTACT
+
+-----------------------------------------------------------------------------------*/
+
+@import 'variables';
+@import 'mixin';
+@import 'common';
+@import 'header';
+@import 'slider';
+@import 'about';
+@import 'service';
+@import 'video';
+@import 'campaing-doner';
+@import 'causes';
+@import 'testimonial';
+@import 'volunteer';
+@import 'event';
+@import 'blog';
+@import 'footer';
+@import 'feature';
+@import 'helping';
+@import 'page-banner';
+@import 'causes-details';
+@import 'sidebar';
+@import 'blog-page';
+@import 'contact';

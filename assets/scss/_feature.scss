@@ -1,0 +1,104 @@
+
+
+
+/*===========================
+      14.FEATUEE css 
+===========================*/
+
+.features_area{
+    position: relative;
+}
+
+.features_shape_1{
+    height: 73px;
+    width: 100%;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: -30px;
+    left: 0;
+    z-index: 6;
+}
+.features_shape_2{
+    height: 73px;
+    width: 100%;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    bottom: -40px;
+    left: 0;
+    z-index: 9;
+}
+
+.features_content{
+    & .title{
+        font-size: 40px;
+        font-weight: 400;
+        
+        @media #{$xs}{
+            font-size: 28px;
+        }
+    }
+    
+    & p{
+        margin-top: 25px;
+    }
+    
+    & .main-btn{
+        margin-top: 45px;
+    }
+}
+
+
+
+.single_feature{
+    & .feature_icon{
+        
+    }
+    & .feature_content{
+        padding-top: 20px;
+        
+        & .feature_title{
+            font-size: 18px;
+            font-weight: 400;
+        }
+        & p{
+            padding-top: 15px;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

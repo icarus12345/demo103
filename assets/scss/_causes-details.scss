@@ -1,0 +1,294 @@
+
+
+
+/*===========================
+    17.CAUSES DETAILS css 
+===========================*/
+
+
+.causes_area{
+    
+}
+
+.causes_details{
+    padding-bottom: 45px;
+    
+    & .causes_details_image{
+        & img{
+            width: 100%;
+        }
+    }
+    & .causes_details_donate{
+        padding: 40px 95px;
+        position: relative;
+        
+        @media #{$lg}{
+            padding: 40px 35px;
+        }
+        @media #{$xs}{
+            padding: 30px 20px;
+        }
+        @media #{$md}{
+            padding: 40px 75px;
+        }
+        
+        & .causes_details_shape_1{
+            position: absolute;
+            top: -11px;
+            height: 26px;
+            width: 100%;
+            left: 0;
+        }
+        & .causes_details_shape_2{
+            position: absolute;
+            bottom: -14px;
+            height: 26px;
+            width: 100%;
+            left: 0;
+        }
+        
+        & .donate_dollar{
+            & span{
+                font-size: 16px;
+                color: $heading-color;
+                font-weight: 600;
+            }
+        }
+        & .donate_progress{
+            margin-top: 10px;
+            
+            & .bar_inner{
+                width: 100%;
+                height: 10px;
+                background-color: rgba($heading-color, 0.10);
+                position: relative;
+
+                & .progress_line{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    height: 10px;
+                    background-color: $theme-color-2;
+                    @include transition(2s);
+                    width: 0;
+
+                    & .percentage{
+                        position: absolute;
+                        top: -35px;
+                        right: -30px;
+                        background-color: $theme-color-2;
+                        font-size: 12px;
+                        padding: 2px 4px;
+                        color: $white;
+
+                        &::before{
+                            position: absolute;
+                            content: '';
+                            width: 0;
+                            height: 0;
+                            border-top: 7px solid $theme-color-2;
+                            border-right: 7px solid transparent;
+                            left: 0;
+                            bottom: -7px;
+                        }
+                    }
+                }
+            }
+        }
+        
+        & .causes_donate_many{
+            padding-top: 20px;
+            margin-left: -5px;
+            margin-right: -5px;
+            
+            & a{
+                width: 40px;
+                height: 40px;
+                line-height: 40px;    
+                text-align: center;
+                background-color: $white;
+                font-size: 16px;
+                font-weight: 700;
+                color: $heading-color;
+                border-radius: 5px;
+                margin: 0 5px;
+                margin-top: 10px;
+                @include transition(0.3s);
+                
+                @media #{$xs}{
+                    width: 30px;
+                    height: 30px;
+                    line-height: 30px;
+                    font-size: 14px;
+                }
+                
+                &:hover{
+                    background-color: $theme-color;
+                    color: $white;
+                }
+            }
+            
+            & .donate_many_form{
+                width: 113px;
+                margin: 0 5px;
+                margin-top: 10px;
+                
+                @media #{$sm}{
+                    width: 108px;
+                }
+                
+                & input{
+                    height: 40px;
+                    padding: 0 15px;
+                    border-radius: 5px;
+                    border: 1px solid rgba($heading-color, 0.10);
+                    color: $heading-color;
+                    background: none;
+                    width: 100%;
+                    
+                    @media #{$xs}{
+                        height: 30px;
+                    }
+                }
+            }
+            
+            & .main-btn{
+                height: 40px;
+                line-height: 40px;
+                padding: 0 15px;
+                font-size: 14px;
+                margin: 0 5px;
+                margin-top: 10px;
+                
+                @media #{$xs}{
+                    height: 30px;
+                    line-height: 30px;
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+    
+    & .causes_details_content{
+        margin-top: 45px;
+        
+        & .causes_details_title{
+            font-size: 30px;
+            font-weight: 600;
+            color: $heading-color;
+            
+            @media #{$xs}{
+                font-size: 24px;
+            }
+        }
+        & p{
+            padding-top: 15px;
+            font-size: 14px;
+        }
+    }
+    
+    & .blockquote{
+        background-color: $white;
+        @include box-shadow (0px 0px 95px 0px rgba($black, 0.15));
+        padding: 35px 40px;
+        border-radius: 30px;
+        overflow: hidden;
+        position: relative;
+        margin-top: 45px;
+        margin-bottom: 30px;
+        
+        @media #{$xs}{
+            padding: 25px 30px;
+        }
+        
+        & i{
+            font-size: 72px;
+            line-height: 75px;
+            position: absolute;
+            right: 40px;
+            top: -10px;
+            color: $theme-color;
+            
+            @media #{$xs}{
+                font-size: 42px;
+                line-height: 45px;
+            }
+        }
+        & p{
+            font-size: 24px;
+            line-height: 36px;
+            
+            @media #{$xs}{
+                font-size: 18px;
+                line-height: 28px;
+            }
+        }
+    }
+    
+    & .causes_details_image{
+        padding-top: 30px;
+        
+        & img{
+            width: 100%;
+        }
+    }
+    
+    & .causes_details_share{
+        margin-top: 35px;
+        
+        & span{
+            font-size: 18px;
+            font-weight: 700;
+            color: $heading-color;
+        }
+        & .social{
+            & li{
+                display: inline-block;
+                margin-left: 10px;
+                
+                & a{
+                    font-size: 18px;
+                    color: #9d9d9d;
+                    @include transition(0.3s);
+                    
+                    &:hover{
+                        color: $theme-color;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.causes_details_form{
+    border-top: 1px solid #b6b6b6;
+    padding-top: 45px;
+    
+    & .causes_details_form_title{
+        font-size: 24px;
+        font-weight: 400;
+    }
+    & p{
+        padding-top: 15px;
+        font-size: 14px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

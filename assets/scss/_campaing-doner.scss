@@ -1,0 +1,339 @@
+
+
+
+/*===========================
+       07.CAMPAING css 
+===========================*/
+
+
+/*==== campaing area ====*/
+
+.campaing_area{
+    
+}
+
+.campaing_nav{}
+
+.nav{
+    padding-top: 5px;
+    & .nav-item{
+        position: relative;
+        margin: 10px 0;
+        
+        & a{
+            display: block;
+        }
+        
+        & .campaing_items{
+            padding: 20px;
+            border-radius: 50px;
+            @include transition(0.3s);
+            
+            @media #{$lg}{
+                padding: 15px;
+            }
+            @media #{$xs}{
+                padding: 10px;
+            }
+            @media #{$sm}{
+                padding: 20px;
+            }
+            
+            & .items_icon{
+                width: 100px;
+                height: 100px;
+                position: relative;
+                border-radius: 50px;
+                border-top-right-radius: 42%;
+                
+                @media #{$lg}{
+                    width: 90px;
+                    height: 90px;
+                }
+                @media #{$xs}{
+                    width: 50px;
+                    height: 50px;
+                }
+                @media #{$sm}{
+                    width: 70px;
+                    height: 70px;
+                }
+                
+                & img{
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    @include transform(translate(-50%, -50%));
+                    
+                    @media #{$xs}{
+                        width: 24px;
+                    }
+                }
+            }
+            & .items_content{
+                padding-left: 20px;
+                
+                @media #{$xs}{
+                    padding-left: 15px;
+                }
+                
+                & .items_title{
+                    font-size: 24px;
+                    font-weight: 400;
+                    
+                    @media #{$lg}{
+                        font-size: 22px;
+                    }
+                    @media #{$xs}{
+                        font-size: 16px;
+                    }
+                    @media #{$sm}{
+                        font-size: 20px;
+                    }
+                }
+                & p{
+                    margin-top: 15px;
+                }
+            }
+            
+            &.items_color_1{
+                & .items_icon{
+                    background-color: rgba(146, 56, 164, 0.10);
+                }
+            }
+            &.items_color_2{
+                & .items_icon{
+                    background-color: rgba(248, 96, 72, 0.10);
+                }
+            }
+            &.items_color_3{
+                & .items_icon{
+                    background-color: rgba(0, 189, 192, 0.10);
+                }
+            }
+        }
+        
+        & .active{
+            & .campaing_items{
+                @include box-shadow (0px 0px 95px 0px rgba(0, 0, 0, 0.15));
+                background-color: $white;
+            }
+        }
+    }
+}
+
+
+.campaing_tab_content{}
+
+.campaing_content{
+    position: relative;
+    
+    & img{
+        width: 100%;
+    }
+    
+    & .campaing_donate{
+        position: absolute;
+        top: 30px;
+        left: 0;
+        width: 70%;
+        right: 0;
+        margin: 0 auto;
+        background: $theme-color;
+        padding: 30px;
+        
+        @media #{$xs}{
+            width: 90%;
+            padding-top: 15px;
+        }
+        
+        & .donate_dollar{
+            & span{
+                font-size: 14px;
+                color: $white;
+            }
+        }
+        
+        & .donate_progress{
+                margin-top: 15px;
+
+            & .bar_inner{
+                width: 100%;
+                height: 10px;
+                background-color: $white;
+                position: relative;
+
+                & .progress_line{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    height: 10px;
+                    background-color: $theme-color-2;
+                    @include transition(2s);
+                    width: 0;
+
+                    & .percentage{
+                        position: absolute;
+                        top: -35px;
+                        right: -30px;
+                        background-color: $theme-color-2;
+                        font-size: 12px;
+                        padding: 2px 4px;
+                        color: $white;
+
+                        &::before{
+                            position: absolute;
+                            content: '';
+                            width: 0;
+                            height: 0;
+                            border-top: 7px solid $theme-color-2;
+                            border-right: 7px solid transparent;
+                            left: 0;
+                            bottom: -7px;
+                        }
+                    }
+                }
+            }
+        }
+        
+        & .donate_btn{
+            margin-top: 30px;
+            
+            & .main-btn{
+                width: 100%;
+                height: 40px;
+                line-height: 38px;
+                border: 1px solid $white;
+                padding: 0 20px;
+                
+                &:hover{
+                    border-color: $theme-color-2;
+                }
+            }
+        }
+    }
+}
+
+
+
+/*==== doner_area ====*/
+
+.doner_area{}
+
+.doner_title{
+    position: relative;
+    
+    &::after,
+    &::before{
+        position: absolute;
+        content: '';
+        width: 35%;
+        height: 2px;
+        border-bottom: 1px dashed rgba($black, 0.50);
+        left: 0;
+        top: 50%;
+        @include transform(translateY(-50%));
+        
+        @media #{$xs}{
+            width: 18%;
+        }
+        @media #{$sm}{
+            width: 30%;
+        }
+    }
+    &::after{
+        left: auto;
+        right: 0;
+    }
+    & .title{
+        font-size: 24px;
+        font-weight: 400;
+        
+        @media #{$xs}{
+            font-size: 20px;
+        }
+    }
+}
+
+
+.single_doner{
+    & .doner_image{
+        width: 135px;
+        height: 135px;
+        border-radius: 50%;
+        border-top-right-radius: 42%;
+        padding: 8px;
+        margin: 0 auto;
+        @include transition(0.3s);
+        
+        @media #{$xs}{
+            width: 100px;
+            height: 100px;
+        }
+        @media #{$sm}{
+            width: 135px;
+            height: 135px;
+        }
+        
+        & img{
+            border-radius: 50%;
+        }
+    }
+    & .doner_content{
+        padding-top: 15px;
+        
+        & .doner_name{
+            font-size: 18px;
+            font-weight: 400;
+            
+            @media #{$xs}{
+                font-size: 16px;
+            }
+            @media #{$sm}{
+                font-size: 18px;
+            }
+        }
+        & p{
+            color: $heading-color;
+            margin-top: 5px;
+        }
+    }
+    &.doner_color-1{
+        & .doner_image{
+            background-color: #f1ae44;
+        }
+    }
+    &.doner_color-2{
+        & .doner_image{
+            background-color: #9238a4;
+        }
+    }
+    &.doner_color-3{
+        & .doner_image{
+            background-color: #00bdc0;
+        }
+    }
+    &.doner_color-4{
+        & .doner_image{
+            background-color: #f86048;
+        }
+    }
+    
+    &:hover{
+        & .doner_image{
+            @include animation(sliderShape 5s linear infinite);
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+

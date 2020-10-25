@@ -1,20 +1,620 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <script type="text/javascript" src="https://d3js.org/d3.v6.js"></script>
-    <link href="style.css" type="text/css" rel="stylesheet"/>
-  </head>
-  <body>
-    <div class="app">
-      <svg></svg>
-      </div>
-    <button id="crop">Cropable</button>
-    <button id="cancel">Cancel</button>
-    <button id="apply">Apply</button>
-    <button id="rotate-left"> <= </button>
-    <button id="rotate-right"> => </button>
-    <button id="undo">Undo</button>
-    <script type="text/javascript" src="main.js"></script>
+<!doctype html>
+<html class="no-js" lang="en">
 
-  </body>
+<head>
+    <meta charset="utf-8">
+
+    <!--====== Title ======-->
+    <title>Hội Từ Thiện Việt Nam</title>
+
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--====== Favicon Icon ======-->
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/png">
+
+    <!--====== Magnific Popup CSS ======-->
+    <link rel="stylesheet" href="assets/css/magnific-popup.css">
+
+    <!--====== Animate CSS ======-->
+    <link rel="stylesheet" href="assets/css/animate.css">
+
+    <!--====== Slick CSS ======-->
+    <link rel="stylesheet" href="assets/css/slick.css">
+
+    <!--====== Font Awesome CSS ======-->
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+
+    <!--====== Fonts CSS ======-->
+    <link rel="stylesheet" href="assets/css/fonts.css">
+
+    <!--====== Bootstrap CSS ======-->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+
+    <!--====== Default CSS ======-->
+    <link rel="stylesheet" href="assets/css/default.css">
+
+    <!--====== Style CSS ======-->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- OrgChart css -->
+    <link rel="stylesheet" href="assets/css/OrgChart.css">
+    
+    <!-- example css and js -->
+    <link rel="stylesheet" href="assets/css/app.css">
+
+<script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=p1EsV_cZnD2TFUjwbjY3cMFT1mn9cDSucLcj7Ns5Uphifs9lCkFRLwEijE90rKPs-2OpOGh1dLys3V3HHVbicqyo-8oeZoeRjXhQhCLjq7s" charset="UTF-8"></script></head>
+
+<body>
+    <!--[if IE]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+  <![endif]-->
+
+    
+    <!--====== PRELOADER PART START ======-->
+
+    <div id="preloader">
+        <div class="preloader">
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+
+    <!--====== PRELOADER PART ENDS ======-->
+    
+    <!--====== HEADER PART START ======-->
+
+    <header class="header_area">
+        <div class="header_top">
+            <div class="container">
+                <div class="header_top_wrapper d-md-flex justify-content-between">
+                    <div class="header_social text-center">
+                        <ul>
+                            <li><a href="#"><i class="fa fa-facebook-square"></i></a></li>
+                            <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
+                            <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+                        </ul>
+                    </div> <!-- header social -->
+
+                    <div class="header_info d-none d-md-block">
+                        <ul>
+                            <li><img src="assets/images/call.png" alt=""><a href="#">(+84)28 66 581 479</a></li>
+                            <li><img src="assets/images/fax.png" alt=""><a href="#">(+84)28 66 581 479</a></li>
+                            <li><img src="assets/images/mail.png" alt=""><a href="mailto:hoituthienvietnam.vn@gmail.com">hoituthienvietnam.vn@gmail.com</a></li>
+                        </ul>
+                    </div> <!-- header info -->
+                </div> <!-- header top wrapper -->
+            </div> <!-- container -->
+        </div> <!-- header top -->
+
+        <div class="header_navbar">
+            <div class="container">
+                <nav class="navbar navbar-expand-lg">
+                    <a class="navbar-brand" href="index.html">
+                        <img src="assets/images/logo.png" alt="logo">
+                    </a> <!-- logo -->
+
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="toggler-icon"></span>
+                        <span class="toggler-icon"></span>
+                        <span class="toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
+                        <ul class="navbar-nav m-auto">
+                            <li><a class="active" href="index.html">Trang Chủ</i></a></li>
+                            <li><a href="about.html">Về Chúng Tôi</i></a></li>
+                            <li><a href="work.html">Hoạt Động</i></a></li>
+                            <li><a href="event.html">Sự Kiện</i></a></li>
+                            <li><a href="news.html">Tin tức</a></li>
+                        </ul>
+                    </div> <!-- navbar collapse -->
+
+                    <div class="navbar_btn d-none d-sm-block">
+                        <a class="main-btn" href="contact.html"><i class="fa fa-heart"></i>Liên Hệ</a>
+                    </div>
+
+                </nav> <!-- navbar -->
+            </div> <!-- container -->
+        </div> <!-- header navbar -->
+    </header>
+
+    <!--====== HEADER PART ENDS ======-->
+
+    <!--====== SLIDER PART START ======-->
+
+    <section class="slider_area slider-active">
+        <div class="single_slider">
+            <div class="slider_image bg_cover" data-animation="kenburns" style="background-image: url(assets/images/slider-1.jpg)"></div> <!-- slider image -->
+            <div class="slider_content_wrapper d-flex align-items-center">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="slider_content text-center">
+                                <p data-animation="fadeInUp" data-delay="0.9s">
+                                    HÃY LÀM VIỆC LỚN BẮT ĐẦU TỪ VIỆC NHỎ</br>
+                                    HÃY LÀM VIỆC KHÓ BẮT ĐẦU TỪ VIỆC DỄ</p>
+                                <h2 class="title" data-animation="fadeInUp" data-delay="0.5s"><img src="assets/images/logo-text.png" style="margin: 15px 0;"></h2>
+                                <!-- <svg><text class="title" data-animation="fadeInUp" data-delay="0.5s" x="8px" y="75%">HỘI TỪ THIỆN VIỆT NAM</text></svg> -->
+                                <h5 class="sub_title" data-animation="fadeInUp" data-delay="0.2s">kết nối cộng đồng Việt - kiến tạo sự thay đổi</h5>
+                            </div> <!-- slider content -->
+                        </div>
+                    </div> <!-- row -->
+                </div> <!-- container -->
+            </div> <!-- slider content wrapper -->
+        </div> <!-- single slider -->
+        
+        <div class="single_slider">
+            <div class="slider_image bg_cover" data-animation="kenburns" style="background-image: url(assets/images/slider-2.jpg)"></div> <!-- slider image -->
+            <div class="slider_content_wrapper d-flex align-items-center">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="slider_content text-center">
+                                <p data-animation="fadeInUp" data-delay="0.9s">
+                                    HÃY LÀM VIỆC LỚN BẮT ĐẦU TỪ VIỆC NHỎ</br>
+                                    HÃY LÀM VIỆC KHÓ BẮT ĐẦU TỪ VIỆC DỄ</p>
+                                <h2 class="title" data-animation="fadeInUp" data-delay="0.5s"><img src="assets/images/logo-text.png" style="margin: 15px 0;"></h2>
+                                <!-- <svg><text class="title" data-animation="fadeInUp" data-delay="0.5s" x="8px" y="75%">HỘI TỪ THIỆN VIỆT NAM</text></svg> -->
+                                <h5 class="sub_title" data-animation="fadeInUp" data-delay="0.2s">kết nối cộng đồng Việt - kiến tạo sự thay đổi</h5>
+                            </div> <!-- slider content -->
+                        </div>
+                    </div> <!-- row -->
+                </div> <!-- container -->
+            </div> <!-- slider content wrapper -->
+        </div> <!-- single slider -->
+        
+        <div class="single_slider">
+            <div class="slider_image bg_cover" data-animation="kenburns" style="background-image: url(assets/images/slider-3.jpg)"></div> <!-- slider image -->
+            <div class="slider_content_wrapper d-flex align-items-center">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="slider_content text-center">
+                                <p data-animation="fadeInUp" data-delay="0.9s">
+                                    HÃY LÀM VIỆC LỚN BẮT ĐẦU TỪ VIỆC NHỎ</br>
+                                    HÃY LÀM VIỆC KHÓ BẮT ĐẦU TỪ VIỆC DỄ</p>
+                                <h2 class="title" data-animation="fadeInUp" data-delay="0.5s"><img src="assets/images/logo-text.png" style="margin: 15px 0;"></h2>
+                                <!-- <svg><text class="title" data-animation="fadeInUp" data-delay="0.5s" x="8px" y="75%">HỘI TỪ THIỆN VIỆT NAM</text></svg> -->
+                                <h5 class="sub_title" data-animation="fadeInUp" data-delay="0.2s">kết nối cộng đồng Việt - kiến tạo sự thay đổi</h5>
+                            </div> <!-- slider content -->
+                        </div>
+                    </div> <!-- row -->
+                </div> <!-- container -->
+            </div> <!-- slider content wrapper -->
+        </div> <!-- single slider -->
+
+        <div class="single_slider">
+            <div class="slider_image bg_cover" data-animation="kenburns" style="background-image: url(assets/images/slider-4.jpg)"></div> <!-- slider image -->
+            <div class="slider_content_wrapper d-flex align-items-center">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="slider_content text-center">
+                                <p data-animation="fadeInUp" data-delay="0.9s">
+                                    HÃY LÀM VIỆC LỚN BẮT ĐẦU TỪ VIỆC NHỎ</br>
+                                    HÃY LÀM VIỆC KHÓ BẮT ĐẦU TỪ VIỆC DỄ</p>
+                                <h2 class="title" data-animation="fadeInUp" data-delay="0.5s"><img src="assets/images/logo-text.png" style="margin: 15px 0;"></h2>
+                                <!-- <svg><text class="title" data-animation="fadeInUp" data-delay="0.5s" x="8px" y="75%">HỘI TỪ THIỆN VIỆT NAM</text></svg> -->
+                                <h5 class="sub_title" data-animation="fadeInUp" data-delay="0.2s">kết nối cộng đồng Việt - kiến tạo sự thay đổi</h5>
+                            </div> <!-- slider content -->
+                        </div>
+                    </div> <!-- row -->
+                </div> <!-- container -->
+            </div> <!-- slider content wrapper -->
+        </div> <!-- single slider -->
+
+        <div class="single_slider">
+            <div class="slider_image bg_cover" data-animation="kenburns" style="background-image: url(assets/images/slider-5.jpg)"></div> <!-- slider image -->
+            <div class="slider_content_wrapper d-flex align-items-center">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="slider_content text-center">
+                                <p data-animation="fadeInUp" data-delay="0.9s">
+                                    HÃY LÀM VIỆC LỚN BẮT ĐẦU TỪ VIỆC NHỎ</br>
+                                    HÃY LÀM VIỆC KHÓ BẮT ĐẦU TỪ VIỆC DỄ</p>
+                                <h2 class="title" data-animation="fadeInUp" data-delay="0.5s"><img src="assets/images/logo-text.png" style="margin: 15px 0;"></h2>
+                                <!-- <svg><text class="title" data-animation="fadeInUp" data-delay="0.5s" x="8px" y="75%">HỘI TỪ THIỆN VIỆT NAM</text></svg> -->
+                                <h5 class="sub_title" data-animation="fadeInUp" data-delay="0.2s">kết nối cộng đồng Việt - kiến tạo sự thay đổi</h5>
+                            </div> <!-- slider content -->
+                        </div>
+                    </div> <!-- row -->
+                </div> <!-- container -->
+            </div> <!-- slider content wrapper -->
+        </div> <!-- single slider -->
+    </section>
+
+    <!--====== SLIDER PART ENDS ======-->
+
+    <!--====== ABOUT PART START ======-->
+
+    <section class="about_area pt-80 pb-130 bg_cover" style="background-image: url(assets/images/gray-bg.jpg)">
+        <div class="about_shape_1" style="background-image: url(assets/images/shape/shape-1.png)"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="about_left  mt-50">
+                        <div class="about_image">
+                            <img src="assets/images/about.jpg" alt="About">
+                            <div class="help_title">
+                                <h3 class="title">Ta mong những người con dân Việt cùng Chung tay để xây dựng đất nước</h3>
+                                <p style="float: right; font-weight: bold; margin-top: 15px; color: #000;">-Vua Hùng 18-</p>
+                            </div>
+                        </div>
+                        <div class="about_content">
+                            <h4 class="about_title">CHÚNG TÔI VỚI 261110 HỘI VIÊN TRÊN TOÀN QUỐC, ĐÃ THIỆN NGUYỆN CHO HƠN 10,000 TRƯỜNG HỢP ĐANG GẶP KHÓ KHĂN.</h4>
+                            <p>HỠI ĐỒNG BÀO THÂN YÊU! Vì tiếng gọi thiêng liêng của non sông chúng ta hãy đoàn kết đoàn kết đại đoàn kết để thực hiện sứ mệnh giải phóng khó nghèo...? Ai có công ít góp it, có tinh thần nhiều góp nhiều. Tất cả cùng chung chí hướng vì dân tộc vì quê hương. Hãy có niềm tin thì <b style="color: #02afef">*KHÔNG GÌ LÀ KHÔNG THỂ*</b>.</p>
+                        </div>
+                    </div> <!-- about left -->
+                </div>
+                <div class="col-lg-4">
+                    <div class="about_right d-flex flex-wrap">
+                        <div class="single_about_items mt-50 color-1 text-center">
+                            <div class="about_icon">
+                                <img class="shape" src="assets/images/shape/shape-3.png" alt="shape">
+                                <img class="icon" src="assets/images/a-icon-1.png" alt="icon">
+                            </div>
+                            <div class="about_content">
+                                <h4 class="items_title">63,000 Tình Nguyện</h4>
+                                <p>Hội Từ Thiện Việt Nam là một tổ chức phi lợi nhuận được hỗ trợ bởi các nhà lãnh đạo cộng đồng, các nhà tài trợ công ty, những quỹ tấm
+                                lòng vàng và mọi cá nhân sẵn lòng chia sẻ đến từ mọi miền tổ quốc.</p>
+                            </div>
+                        </div> <!-- single about items -->
+                        <div class="single_about_items mt-50 color-1 text-center">
+                            <div class="about_icon">
+                                <img class="shape" src="assets/images/shape/shape-3.png" alt="shape">
+                                <img class="icon" src="assets/images/a-icon-2.png" alt="icon">
+                            </div>
+                            <div class="about_content">
+                                <h4 class="items_title">Hơn 10,000 Quyên Góp</h4>
+                                <p>Chúng tôi đã nhận được sự chia sẻ từ các mạnh thường quân, các nhà lãnh đạo trên toàn quốc hỗ trợ và đóng góp để giúp đỡ cho các trường hợp gặp khó khăn trên toàn quốc.</p>
+                            </div>
+                        </div> <!-- single about items -->
+                    </div> <!-- about right -->
+                </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
+        <div class="about_shape_2" style="background-image: url(assets/images/shape/shape-1.png)"></div>
+    </section>
+
+    <!--====== ABOUT PART ENDS ======-->
+
+    <!--====== SERVICES PART START ======-->
+
+    <section class="service_area pt-130">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section_title text-center pb-80">
+                        <img src="assets/images/section_icon.png" alt="Icon">
+                        <h3 class="title">HOẠT ĐỘNG CỦA CHÚNG TÔI</h3>
+                    </div> <!-- section title -->
+                </div>
+            </div> <!-- row -->
+            <div class="row no-gutters justify-content-center">
+                <div class="col-lg-4 col-md-7">
+                    <div class="single_services text-center services_1">
+                        <div class="services_content">
+                            <h4 class="services_title"><a href="#">DỰ ÁN XÂY DỰNG</a></h4>
+                            <h5 class="text-index">*Nắm Gạo Tình Thương*</h5>
+                            <p class="text-index-nd">Tài trợ quỹ
+                            <b>*NĂM BẮC ÁI*</b></p>
+                        </div>
+                    </div> <!-- single services -->
+                </div>
+                <div class="col-lg-4 col-md-7">
+                    <div class="single_services active text-center services_2">
+                        <div class="services_content">
+                            <h4 class="services_title"><a href="#">DỰ ÁN HỖ TRỢ</a></h4>
+                            <h5 class="text-index">*Tài Chính Hướng Nghiệp*</h5>
+                            <p class="text-index-nd">Mô hình xoá đói giảm nghèo</br>
+                            <b>*TÔM LÚA - CHĂN NUÔI*</b></p>
+                        </div>
+                    </div> <!-- single services -->
+                </div>
+                <div class="col-lg-4 col-md-7">
+                    <div class="single_services text-center services_3">
+                        <div class="services_content">
+                            <h4 class="services_title"><a href="#">DỰ ÁN XÚC TÁC</a></h4>
+                            <h5 class="text-index">*Cầu Nối Thương Mại*</h5>
+                            <p class="text-index-nd">Sàn giao dịch</br>
+                            <b>*NÔNG SẢN - THỰC PHẨM*</b></p>
+                        </div>
+                    </div> <!-- single services -->
+                </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
+    </section>
+
+    <!--====== SERVICES PART ENDS ======-->
+
+    <!--====== VIDEO PART START ======-->
+
+    <section class="video_area pb-130 bg_cover" style="background-image: url(assets/images/videobg.jpg)">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-7">
+                    <div class="video_content mt-50">
+                        <h4 class="video_title">Chúng tôi đã phục vụ hơn 80.000 người nghèo</h4>
+                    </div> <!-- video content -->
+                </div>
+                <div class="col-lg-5">
+                    <div class="video_watch mt-50">
+                        <a href="https://www.youtube.com/watch?v=WKUjCCOcLFY" class="video_play video-popup"><span><i class="fa fa-play"></i></span> Xem video</a>
+                    </div> <!-- video watch -->
+                </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
+    </section>
+
+    <!--====== VIDEO PART ENDS ======-->
+
+    <!--====== CAMPAING DONER PART START ======-->
+
+    <section class="campaing_doner_area">
+        <div class="campaing_area pt-130 pb-110">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="section_title text-center pb-30">
+                            <img src="assets/images/section_icon.png" alt="Icon">
+                            <h3 class="title">SỰ KIỆN CỦA CHÚNG TÔI</h3>
+                        </div> <!-- section title -->
+                    </div>
+                </div> <!-- row -->
+                <div class="row">
+                    <div class="col-lg-5">
+                        <div class="campaing_nav pt-15">
+                            <ul class="nav" id="myTab" role="tablist">
+                                <li class="nav-item">
+                                    <a class="active" id="hospital-tab" data-toggle="tab" href="#hospital" role="tab" aria-controls="hospital" aria-selected="true">
+                                        <div class="campaing_items items_color_1 d-flex">
+                                            <div class="items_icon">
+                                                <img src="assets/images/c-icon-1.png" alt="icon">
+                                            </div>
+                                            <div class="items_content media-body">
+                                                <p style="margin-top: 10px;">Hội từ thiện đang kết nạp thêm nhiều thành viên mới Ở khắp cả nước Việt nam.</p>
+                                            </div>
+                                        </div> <!-- campaing items -->
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a id="cancer-tab" data-toggle="tab" href="#cancer" role="tab" aria-controls="cancer" aria-selected="false">
+                                        <div class="campaing_items items_color_2 d-flex">
+                                            <div class="items_icon">
+                                                <img src="assets/images/c-icon-2.png" alt="icon">
+                                            </div>
+                                            <div class="items_content media-body">
+                                                <p>Chúng tôi đã thực hiện nhiều chương trình chia sẻ cho cộng đồng nghèo khó và các gia đình có công với cách mạng ở mọi miền tổ quốc.</p>
+                                            </div>
+                                        </div> <!-- campaing items -->
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a id="environtment-tab" data-toggle="tab" href="#environtment" role="tab" aria-controls="environtment" aria-selected="false">
+                                        <div class="campaing_items items_color_3 d-flex">
+                                            <div class="items_icon">
+                                                <img src="assets/images/c-icon-3.png" alt="icon">
+                                            </div>
+                                            <div class="items_content media-body">
+                                                <p>chính sách hỗ trợ của hội chúng tôi đang bảo trợ cho gần 20 trại trẻ mồ côi và người già neo đơn ở một số tỉnh thành trong nước.</p>
+                                            </div>
+                                        </div> <!-- campaing items -->
+                                    </a>
+                                </li>
+                            </ul>
+                        </div> <!-- campaing nav -->
+                    </div>
+
+                    <div class="col-lg-7">
+                        <div class="campaing_tab_content mt-30">
+                            <div class="tab-content" id="myTabContent">
+                                <div class="tab-pane fade show active" id="hospital" role="tabpanel" aria-labelledby="hospital-tab">
+                                    <div class="campaing_content">
+                                        <img src="assets/images/campaing-1.png" alt="">
+                                    </div> <!-- campaing content  -->
+                                </div>
+                                <div class="tab-pane fade" id="cancer" role="tabpanel" aria-labelledby="cancer-tab">
+                                    <div class="campaing_content">
+                                        <img src="assets/images/campaing-2.jpg" alt="">
+                                    </div> <!-- campaing content  -->
+                                </div>
+                                <div class="tab-pane fade" id="environtment" role="tabpanel" aria-labelledby="environtment-tab">
+                                    <div class="campaing_content">
+                                        <img src="assets/images/campaing-3.jpg" alt="">
+                                    </div> <!-- campaing content  -->
+                                </div>
+                            </div>
+                        </div> <!-- campaing tab content -->
+                    </div>
+                </div> <!-- row -->
+            </div> <!-- container -->
+        </div> <!-- campaing area -->
+
+    </section>
+
+    <!--====== CAMPAING DONER PART ENDS ======-->
+
+    <!--====== NEWS START ======-->
+
+    <section class="causes_area pt-130 pb-130 bg_cover" style="background-image: url(assets/images/gray-bg.jpg)">
+        <div class="causes_shape_1" style="background-image: url(assets/images/shape/shape-1.png)"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section_title text-center pb-30">
+                        <img src="assets/images/section_icon.png" alt="Icon">
+                        <h3 class="title">TIN TỨC</h3>
+                    </div> <!-- section title -->
+                </div>
+            </div> <!-- row -->
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="blog_left mt-50">
+                        <div class="blog_image">
+                            <img src="assets/images/blog_left.jpg" alt="blog">
+                        </div>
+                        <div class="blog_content">
+                            <div class="title_bar d-flex">
+                                <div class="blog_date d-flex align-items-center justify-content-center">
+                                    <span class="date"><span>30</span>Tháng 4 </span>
+                                </div>
+                                <div class="blog_title_meta media-body">
+                                    <div class="blog_title"><a href="news.html">Ấm áp nghĩa tình Ngày Thương binh - Liệt sĩ</a></div>
+                                    <ul class="blog_meta">
+                                        <li><a href="#"><i class="fa fa-user-o"></i> Admin</a></li>
+                                        <li><a href="#"><i class="fa fa-bookmark-o"></i> 30 tháng 4</a></li>
+                                    </ul>
+                                </div>
+                            </div> <!-- title bar -->
+                            <div class="text_bar">
+                                <p>Những hoạt động tri ân các thương bệnh binh và các Mẹ Việt Nam anh hùng đều để lại cảm xúc ấm áp.....</p>
+                            </div>
+                        </div>
+                    </div> <!-- blog left -->
+                </div>
+                <div class="col-lg-6">
+                    <div class="blog_right pt-25">
+                        <div class="single_blog blog_color-1 d-sm-flex mt-25">
+                            <div class="blog_image">
+                                <img src="assets/images/blog-1.jpg" alt="blog">
+                                
+                                <div class="blog_date d-flex align-items-center justify-content-center">
+                                    <span class="date"><span>7</span> Tháng 5</span>
+                                </div>
+                            </div>
+                            <div class="blog_content media-body">
+                                <h3 class="blog_title"><a href="news.html">Cụ bà ăn xin ở chợ Lagi, sống nhờ tình thương người đời...</a></h3>
+                                <ul class="blog_meta">
+                                    <li><a href="#"><i class="fa fa-user-o"></i> Admin</a></li>
+                                    <li><a href="#"><i class="fa fa-bookmark-o"></i> 7 tháng 5</a></li>
+                                </ul>
+                                <p>Buổi chợ chiều ở thị xã Lagi buồn những ngày mưa não nề. Dòng người ngược xuôi hối hả. Xa xa dáng người gầy nhom trong bộ quần áo sờn rách....</p>
+                            </div>
+                        </div> <!-- single blog -->
+                        
+                        <div class="single_blog blog_color-2 d-sm-flex mt-25">
+                            <div class="blog_image">
+                                <img src="assets/images/blog-2.jpg" alt="blog">
+                                
+                                <div class="blog_date d-flex align-items-center justify-content-center">
+                                    <span class="date"><span>7</span> Tháng 5</span>
+                                </div>
+                            </div>
+                            <div class="blog_content media-body">
+                                <h3 class="blog_title"><a href="news.html">Trẻ em còn đang chịu cảnh đói nghèo tại vùng quê...</a></h3>
+                                <ul class="blog_meta">
+                                    <li><a href="#"><i class="fa fa-user-o"></i> Admin</a></li>
+                                    <li><a href="#"><i class="fa fa-bookmark-o"></i> 7 tháng 5</a></li>
+                                </ul>
+                                <p>Chúng tôi có cơ hội đi nhiều nơi khác nhau. Điều làm tôi cảm thấy nhói tim khi chứng kiến cảnh những đứa trẻ phải lao động nguy hiểm, sống...</p>
+                            </div>
+                        </div> <!-- single blog -->
+                        
+                        <div class="single_blog blog_color-3 d-sm-flex mt-25">
+                            <div class="blog_image">
+                                <img src="assets/images/blog-3.jpg" alt="blog">
+                                
+                                <div class="blog_date d-flex align-items-center justify-content-center">
+                                    <span class="date"><span>7</span> Tháng 5</span>
+                                </div>
+                            </div>
+                            <div class="blog_content media-body">
+                                <h3 class="blog_title"><a href="news.html">Tiếng khóc xé lòng của bé gái 3 tuổi mắc bệnh hiểm nghèo</a></h3>
+                                <ul class="blog_meta">
+                                    <li><a href="#"><i class="fa fa-user-o"></i> Admin</a></li>
+                                    <li><a href="#"><i class="fa fa-bookmark-o"></i> 7 tháng 5</a></li>
+                                </ul>
+                                <p>Nhà khó khăn, không cam chịu nhìn con gái mới 3 tuổi mắc bệnh hiểm nghèo, sống mòn trong đau đớn...</p>
+                            </div>
+                        </div> <!-- single blog -->
+                    </div> <!-- blog right -->
+                </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
+        <div class="causes_shape_2" style="background-image: url(assets/images/shape/shape-1.png)"></div>
+    </section>
+    <!--====== NEWS END ======-->
+
+    <!--====== FOOTER PART START ======-->
+
+    <footer class="footer_area">
+        <div class="footer_widget">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 order-md-1 order-lg-1">
+                        <div class="footer_about mt-60 mb-15">
+                            <a href="index.html">
+                                <img src="assets/images/logo-text.png" alt="Logo">
+                            </a>
+                        </div> <!-- footer about -->
+                    </div>
+                    <div class="col-lg-9 col-md-12 order-md-3 order-lg-3">
+                        <div class="footer_subscribe mt-35 mb-10 text-float">
+                            <p><a href="mailto:hoituthienvietnam.vn@gmail.com">Email: hoituthienvietnam@gmail.com</a></br>
+                            <a href="https://www.facebook.com/profile.php?id=100055890707803">Facebook: HộitừthiệnViệtNam</a></br>
+                            <a href="www.hoituthienvietnam.com.vn">Website: www.hoituthienvietnam.com.vn</a></p>
+                            
+                        </div> <!-- footer link  --> 
+                    </div>
+                </div> <!-- row -->
+            </div> <!-- container -->
+        </div> <!-- footer widget -->
+    </footer>
+
+    <!--====== FOOTER PART ENDS ======-->
+    
+    <!--====== GO TO TOP PART START ======-->
+    
+    <div class="go-top-area">
+        <div class="go-top-wrap">
+            <div class="go-top-btn-wrap">
+                <div class="go-top go-top-btn">
+                    <i class="fa fa-angle-double-up"></i>
+                    <i class="fa fa-angle-double-up"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!--====== GO TO TOP PART ENDS ======-->
+    
+ 
+
+
+
+
+    <!--====== Jquery js ======-->
+    <script src="assets/js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="assets/js/vendor/modernizr-3.7.1.min.js"></script>
+
+    <!--====== Bootstrap js ======-->
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+
+    <!--====== Slick js ======-->
+    <script src="assets/js/slick.min.js"></script>
+
+    <!--====== Magnific Popup js ======-->
+    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+
+    <!--====== Appear js ======-->
+    <script src="assets/js/jquery.appear.min.js"></script>
+    
+    <!--====== Counter Up js ======-->
+    <script src="assets/js/waypoints.min.js"></script>
+    <script src="assets/js/jquery.counterup.js"></script>
+
+    <!--====== wow js ======-->
+    <script src="assets/js/wow.min.js"></script>
+
+    <!--====== Main js ======-->
+    <script src="assets/js/main.js"></script>
+
+    <!-- OrgChart js -->
+    <script src="assets/js/OrgChart.js"></script>
+
+</body>
+
 </html>

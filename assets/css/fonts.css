@@ -1,0 +1,96 @@
+@font-face {
+ font-family:Anton;
+ src:url('../fonts/Anton-Regular.ttf') format('truetype'),
+ url('../fonts/Anton-Regular.eot#iefix') format('embedded-opentype'),
+ url('../fonts/Anton-Regular.woff') format('woff');
+ font-weight:normal;
+ font-style:normal;
+}
+@font-face {
+ font-family:Varela;
+ src:url('../fonts/VarelaRound-Regular.ttf') format('truetype'),
+ url('../fonts/VarelaRound-Regular.eot#iefix') format('embedded-opentype'),
+ url('../fonts/VarelaRound-Regular.woff') format('woff');
+ font-weight:normal;
+ font-style:normal;
+}
+@font-face {
+ font-family:Lalezar;
+ src:url('../fonts/Lalezar-Regular.ttf') format('truetype'),
+ url('../fonts/Lalezar-Regular.eot#iefix') format('embedded-opentype'),
+ url('../fonts/Lalezar-Regular.woff') format('woff');
+ font-weight:normal;
+ font-style:normal;
+}
+@font-face {
+ font-family:PaytoneOne;
+ src:url('../fonts/PaytoneOne-Regular.ttf') format('truetype'),
+ url('../fonts/PaytoneOne-Regular.eot#iefix') format('embedded-opentype'),
+ url('../fonts/PaytoneOne-Regular.woff') format('woff');
+ font-weight:normal;
+ font-style:normal;
+}
+@font-face {
+ font-family:SigmarOne;
+ src:url('../fonts/SigmarOne-Regular.ttf') format('truetype'),
+ url('../fonts/SigmarOne-Regular.eot#iefix') format('embedded-opentype'),
+ url('../fonts/SigmarOne-Regular.woff') format('woff');
+ font-weight:normal;
+ font-style:normal;
+}
+@font-face {
+ font-family:Mitr;
+ src:url('../fonts/Mitr-Regular.ttf') format('truetype'),
+ url('../fonts/Mitr-Regular.eot#iefix') format('embedded-opentype'),
+ url('../fonts/Mitr-Regular.woff') format('woff');
+ font-weight:normal;
+ font-style:normal;
+}
+@font-face {
+ font-family:MitrMedium;
+ src:url('../fonts/Mitr-Medium.ttf') format('truetype'),
+ url('../fonts/Mitr-Medium.eot#iefix') format('embedded-opentype'),
+ url('../fonts/Mitr-Medium.woff') format('woff');
+ font-weight:normal;
+ font-style:normal;
+}
+@font-face {
+ font-family:MitrSemi;
+ src:url('../fonts/Mitr-SemiBold.ttf') format('truetype'),
+ url('../fonts/Mitr-SemiBold.eot#iefix') format('embedded-opentype'),
+ url('../fonts/Mitr-SemiBold.woff') format('woff');
+ font-weight:normal;
+ font-style:normal;
+}
+@font-face {
+ font-family:MitrBold;
+ src:url('../fonts/Mitr-Bold.ttf') format('truetype'),
+ url('../fonts/Mitr-Bold.eot#iefix') format('embedded-opentype'),
+ url('../fonts/Mitr-Bold.woff') format('woff');
+ font-weight:normal;
+ font-style:normal;
+}
+@font-face {
+ font-family:RobotoCB;
+ src:url('../fonts/RobotoCondensed-Bold.ttf') format('truetype'),
+ url('../fonts/RobotoCondensed-Bold.eot#iefix') format('embedded-opentype'),
+ url('../fonts/RobotoCondensed-Bold.woff') format('woff');
+ font-weight:normal;
+ font-style:normal;
+}
+@font-face {
+ font-family:RobotoCR;
+ src:url('../fonts/RobotoCondensed-Regular.ttf') format('truetype'),
+ url('../fonts/RobotoCondensed-Regular.eot#iefix') format('embedded-opentype'),
+ url('../fonts/RobotoCondensed-Regular.woff') format('woff');
+ font-weight:normal;
+ font-style:normal;
+}
+@font-face {
+ font-family:RobotoCL;
+ src:url('../fonts/RobotoCondensed-Light.ttf') format('truetype'),
+ url('../fonts/RobotoCondensed-Light.eot#iefix') format('embedded-opentype'),
+ url('../fonts/RobotoCondensed-Light.woff') format('woff');
+ font-weight:normal;
+ font-style:normal;
+}

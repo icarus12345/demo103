@@ -1,0 +1,616 @@
+
+
+
+/*===========================
+      10.VOLUNTEER css 
+===========================*/
+
+.volunteer_area{
+    position: relative;
+}
+
+.volunteer_shape_1{
+    height: 73px;
+    width: 100%;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: -30px;
+    left: 0;
+    z-index: 5;
+}
+.volunteer_shape_2{
+    height: 73px;
+    width: 100%;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    bottom: -40px;
+    left: 0;
+    z-index: 5;
+}
+
+
+.single_volunteer{
+    & .volunteer_image{
+        position: relative;
+        overflow: hidden;
+        
+        & img{
+            width: 100%;
+            @include transition(0.3s);
+        }
+        
+        & .volunteer_social{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba($heading-color, 0.3);
+            opacity: 0;
+            visibility: hidden;
+            @include transition(0.3s);
+                
+            & .social{
+                position: absolute;
+                top: 50%;
+                width: 100%;
+                text-align: center;
+                @include transform(translateY(-50%));
+                
+                & li{
+                    display: inline-block;
+                    margin: 0 4px;
+                    @include transition(0.3s);
+                    @include transform(translateY(100%));
+                    opacity: 0;
+                    
+                    & a{
+                        font-size: 20px;
+                        color: $white;
+                        @include transition(0.3s);
+                    }
+                }
+            }
+        }
+    }
+    & .volunteer_content{
+        width: 180px;
+        height: 180px;
+        border-radius: 50%;
+        border-top-right-radius: 42%;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: -90px;
+        position: relative;
+        z-index: 5;
+        @include transition(0.3s);
+        
+        & .content_wrapper{
+            & .volunteer_name{
+                & a{
+                    color: $white;
+                    font-size: 18px;
+                    font-weight: 400;
+                }
+            }
+            & p{
+                color: $white;
+                margin-top: 8px;
+            }
+        }
+    }
+    
+    &:hover{
+        & .volunteer_image{
+            & img{
+                @include transform(scale(1.1));
+            }
+            
+            & .volunteer_social{
+                opacity: 1;
+                visibility: visible;
+                
+                & .social{
+                    & li{
+                        @include transform(translateY(0));
+                        opacity: 1;
+                        
+                        &:nth-of-type(1){
+                            @include transition-delay(0.1s);
+                        }
+                        &:nth-of-type(2){
+                            @include transition-delay(0.2s);
+                        }
+                        &:nth-of-type(3){
+                            @include transition-delay(0.3s);
+                        }
+                        &:nth-of-type(4){
+                            @include transition-delay(0.4s);
+                        }
+                    }
+                }
+            }
+        }
+        
+        & .volunteer_content{
+            @include animation(sliderShape 5s linear infinite);
+        }
+    }
+    
+    &.volunteer_color_1{
+        & .volunteer_image{
+            & .volunteer_social{
+                & .social{
+                    & li{
+                        & a{
+                            &:hover{
+                                color: #f1ae44;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        & .volunteer_content{
+            background-color: #f1ae44;
+        }
+    }
+    
+    &.volunteer_color_2{
+        & .volunteer_image{
+            & .volunteer_social{
+                & .social{
+                    & li{
+                        & a{
+                            &:hover{
+                                color: #953ea7;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        & .volunteer_content{
+            background-color: #953ea7;
+        }
+    }
+    
+    &.volunteer_color_3{
+        & .volunteer_image{
+            & .volunteer_social{
+                & .social{
+                    & li{
+                        & a{
+                            &:hover{
+                                color: #f86048;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        & .volunteer_content{
+            background-color: #f86048;
+        }
+    }
+    
+    &.volunteer_color_4{
+        & .volunteer_image{
+            & .volunteer_social{
+                & .social{
+                    & li{
+                        & a{
+                            &:hover{
+                                color: #00bdc0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        & .volunteer_content{
+            background-color: #00bdc0;
+        }
+    }
+}
+
+/*===== Volunteer Form =====*/
+
+.volunteer_form_area{
+    position: relative;
+    z-index: 5;
+    
+    &::before{
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        background: -webkit-linear-gradient(left, rgba(41,10,89,1) 0%, rgba(248,96,72,1) 100%);
+        background: -o-linear-gradient(left, rgba(41,10,89,1) 0%, rgba(248,96,72,1) 100%);
+        background: linear-gradient(to right, rgba(41,10,89,1) 0%, rgba(248,96,72,1) 100%);
+        opacity: 0.8;
+    }
+}
+
+.volunteer_form{
+    background-color: #9238a4;
+    padding: 85px 90px 90px;
+    position: relative;
+    top: 50px;
+    
+    @media #{$lg}{
+        padding: 65px 70px 70px;
+    }
+    @media #{$xs}{
+        padding: 25px 30px 30px;
+    }
+    @media #{$sm}{
+        padding: 65px 70px 70px;
+    }
+    
+    & .volunteer_title{
+        font-size: 36px;
+        color: $white;
+        padding-bottom: 18px;
+        
+        @media #{$lg}{
+            font-size: 32px;
+        }
+        @media #{$xs}{
+            font-size: 24px;
+        }
+        @media #{$sm}{
+            font-size: 28px;
+        }
+    }
+    & .single_form{
+        margin-top: 15px;
+        
+        & textarea,
+        & input{
+            width: 100%;
+            height: 40px;
+            padding: 0 20px;
+            border-radius: 5px;
+            background-color: $white;
+            border: 0;
+            font-size: 14px;
+        }
+        
+        & textarea{
+            height: 70px;
+            padding-top: 10px;
+            resize: none;
+        }
+        
+        & .main-btn{
+            width: 100%;
+        }
+    }
+    
+    &.volunteer_form_2{
+        top: 0;
+        padding: 0 90px;
+        background-color: transparent;
+        
+        @media #{$lg}{
+            padding: 0 60px;
+        }
+        @media #{$md}{
+            padding: 0 60px;
+            padding-top: 125px;
+            padding-bottom: 125px;
+        }
+        @media #{$xs}{
+            padding: 0 20px;
+            padding-top: 125px;
+            padding-bottom: 125px;
+        }
+    }
+}
+
+
+/*===== Volunteer Support =====*/
+
+.volunteer_support{}
+
+.support_title{
+    padding-bottom: 15px;
+    & .title{
+        font-size: 24px;
+        font-weight: 400;
+        
+        @media #{$xs}{
+            font-size: 18px;
+        }
+        @media #{$sm}{
+            font-size: 24px;
+        }
+    }
+}
+
+.single_support{
+    & .support_logo{}
+    & .support_content{
+        padding-left: 10px;
+        
+        & .title{
+            font-size: 24px;
+            font-weight: 400;
+            
+            @media #{$lg}{
+                font-size: 20px;
+            }
+            @media #{$xs}{
+                font-size: 18px;
+            }
+            @media #{$sm}{
+                font-size: 22px;
+            }
+        }
+        & p{
+            color: #afafaf;
+        }
+    }
+}
+
+
+/*===== Volunteer Form 2 =====*/
+
+.volunteer_form_area_2{
+    position: relative;
+    background-color: #953ea7;
+    height: 570px;
+    
+    @media #{$md}{
+        height: auto;
+    }
+    @media #{$xs}{
+        height: auto;
+    }
+}
+
+.volunteer_image_2{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    
+    @media #{$md}{
+        width: 100%;
+        height: 570px;
+        position: relative;
+    }
+    @media #{$xs}{
+        width: 100%;
+        height: 270px;
+        position: relative;
+    }
+    @media #{$sm}{
+        height: 370px;
+    }
+}
+
+
+/*===== Volunteer 2 =====*/
+
+.volunteer_area_2{
+    position: relative;
+}
+
+.volunteer_area_2{
+    
+}
+
+.volunteer_content_2{
+    & .title{
+        font-size: 48px;
+        font-weight: 400;
+        
+        @media #{$xs}{
+            font-size: 28px;
+        }
+        @media #{$sm}{
+            font-size: 38px;
+        }
+    }
+    & p{
+        margin-top: 25px;
+    }
+    & .main-btn{
+        padding: 0 16px;
+        height: 40px;
+        line-height: 40px;
+        margin-top: 30px;
+    }
+}
+
+.volunteer_slider{
+    & .slick-dots{
+        text-align: center;
+        width: 100%;
+        margin-top: 20px;
+        
+        & li{
+            display: inline-block;
+            margin: 0 5px;
+            
+            & button{
+                font-size: 0;
+                padding: 0;
+                width: 13px;
+                height: 13px;
+                border: 1px solid $theme-color;
+                background: none;
+                border-radius: 50%;
+                @include transition(0.3s);
+            }
+            
+            &.slick-active{
+                & button{
+                    background-color: $theme-color;
+                }
+            }
+        }
+    }
+}
+
+.single_volunteer_2{
+    position: relative;
+    
+    & .volunteer_image{
+        overflow: hidden;
+        
+        & img{
+            width: 100%;
+            @include transition(0.3s);
+        }
+    }
+    & .volunteer_social{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba($heading-color, 0.3);
+        opacity: 0;
+        visibility: hidden;
+        @include transition(0.3s);
+
+        & .social{
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            text-align: center;
+            @include transform(translateY(-50%));
+
+            & li{
+                display: inline-block;
+                margin: 0 4px;
+                @include transition(0.3s);
+                @include transform(translateY(100%));
+                opacity: 0;
+
+                & a{
+                    font-size: 20px;
+                    color: $white;
+                    @include transition(0.3s);
+                    
+                }
+            }
+        }
+    }
+    & .volunteer_text{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        padding-bottom: 40px;
+        
+        & .volunteer_name{
+            font-size: 18px;
+            font-weight: 400;
+            color: $white;
+            @include transform(translateY(100%));
+            @include transition(0.3s);
+            opacity: 0;
+        }
+        & p{
+            color: $white;
+            @include transform(translateY(100%));
+            @include transition(0.3s);
+            opacity: 0;
+            margin-top: 4px;
+        }
+    }
+    
+    &:hover{
+         
+        & .volunteer_image{
+            & img{
+                @include transform(scale(1.1));
+            }
+        }
+            
+        & .volunteer_social{
+            opacity: 1;
+            visibility: visible;
+
+            & .social{
+                & li{
+                    @include transform(translateY(0));
+                    opacity: 1;
+
+                    &:nth-of-type(1){
+                        @include transition-delay(0.1s);
+                    }
+                    &:nth-of-type(2){
+                        @include transition-delay(0.2s);
+                    }
+                    &:nth-of-type(3){
+                        @include transition-delay(0.3s);
+                    }
+                    &:nth-of-type(4){
+                        @include transition-delay(0.4s);
+                    }
+                }
+            }
+        }
+        
+        & .volunteer_text{
+
+            & .volunteer_name{
+                @include transform(translateY(0));
+                @include transition-delay(0.1s);
+                opacity: 1;
+            }
+            & p{
+                @include transform(translateY(0));
+                @include transition-delay(0.2s);
+                opacity: 1;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

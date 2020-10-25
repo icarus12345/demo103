@@ -1,0 +1,651 @@
+
+
+
+/*===========================
+       02.HEADER css 
+===========================*/
+
+.header_area{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+}
+
+/*===== Header Top =====*/
+
+.header_top{
+    background-color: $heading-color;
+    padding-bottom: 15px;
+}
+
+.header_top_wrapper{
+    & .header_social{
+        padding-top: 15px;
+        
+        & ul{
+            & li{
+                display: inline-block;
+                margin-right: 10px;
+                
+                &:last-child{
+                    margin-right: 0;
+                }
+                
+                & a{
+                    font-size: 16px;
+                    color: $white;
+                }
+            }
+        }
+    }
+    & .header_info{
+        padding-top: 15px;
+        
+        & ul{
+            & li{
+                display: inline-block;
+                position: relative;
+                
+                & + li{
+                    margin-left: 40px;
+                    
+                    @media #{$md}{
+                        margin-left: 30px;
+                    }
+                    
+                    &::before{
+                        position: absolute;
+                        content: '/';
+                        top: 1px;
+                        left: -25px;
+                        font-size: 16px;
+                        color: $white;
+                        
+                        @media #{$md}{
+                            left: -20px;
+                        }
+                    }
+                }
+                
+                & img{
+                    margin-right: 10px;
+                    width: 16px;
+                }
+                & a{
+                    font-size: 14px;
+                    color: $white;
+                    
+                    @media #{$md}{
+                        font-size: 13px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/*===== Header Navbar =====*/
+
+.header_navbar{
+    position: relative;
+    z-index: 9;
+    
+    &::before{
+        position: absolute;
+        content: '';
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 50%;
+        background-color: $heading-color;
+        z-index: -1;
+    }
+    
+    &.sticky{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: $white;
+        @include box-shadow (0px 10px 25px 0px rgba($black, 0.15));
+        z-index: 99;
+        @include animation(sticky 1.5s);
+        
+        &::before{
+            display: none;
+        }
+    }
+}
+
+
+@-webkit-keyframes sticky {
+    0%{
+        -webkit-transform: translateY(-100%);
+        transform: translateY(-100%)
+    }
+    100%{
+        -webkit-transform: translateY(0%);
+        transform: translateY(0%)
+    }
+}
+
+@keyframes sticky {
+    0%{
+        -webkit-transform: translateY(-100%);
+        transform: translateY(-100%)
+    }
+    100%{
+        -webkit-transform: translateY(0%);
+        transform: translateY(0%)
+    }
+}
+
+.navbar{
+    padding: 0 30px;
+    background-color: $white;
+    position: relative;
+    
+    @media #{$md}{
+        padding: 15px 20px;
+    }
+    @media #{$xs}{
+        padding: 15px 20px;
+    }
+}
+
+.navbar-brand{}
+
+.navbar-toggler {
+    padding: 0;
+
+    & .toggler-icon {
+        width: 30px;
+        height: 2px;
+        background-color: $black;
+        display: block;
+        margin: 5px 0;
+        position: relative;
+        @include transition(0.3s);
+    }
+
+    &.active {
+        & .toggler-icon {
+            &:nth-of-type(1) {
+                @include transform(rotate(45deg));
+                top: 7px;
+            }
+
+            &:nth-of-type(2) {
+                opacity: 0;
+            }
+
+            &:nth-of-type(3) {
+                @include transform(rotate(135deg));
+                top: -7px;
+            }
+        }
+    }
+}
+
+
+.navbar-collapse {
+    @media #{$md} {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: $white;
+        z-index: 9;
+        @include box-shadow (0px 15px 20px 0px rgba(0, 0, 0, 0.1));
+        padding: 5px 12px;
+    }
+
+    @media #{$xs} {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: $white;
+        z-index: 9;
+        @include box-shadow (0px 15px 20px 0px rgba(0, 0, 0, 0.1));
+        padding: 5px 12px;
+    }
+}
+
+.navbar-nav{
+    & li{
+        position: relative;
+        
+        & a{
+            font-size: 15px;
+            font-weight: 700;
+            padding: 30px 15px;
+            color: $heading-color;
+            @include transition(0.3s);
+            
+            @media #{$lg}{
+                padding: 30px 10px;
+            }
+            @media #{$md}{
+                display: block;
+                padding: 6px 15px;
+            }
+            @media #{$xs}{
+                display: block;
+                padding: 6px 15px;
+            }
+            
+            & i{
+                font-size: 16px;
+                margin-left: 5px;
+                
+                @media #{$md}{
+                    display: none;
+                }
+                @media #{$xs}{
+                    display: none;
+                }
+            }
+            
+            &.active{
+                color: $theme-color;
+            }
+            
+            & .sub-nav-toggler{
+                display: none;
+
+                @media #{$md} {
+                    display: block;
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    background: none;
+                    color: $body-color;
+                    font-size: 16px;
+                    border: 0;
+                    width: 35px;
+                    height: 35px;
+                }
+                @media #{$xs} {
+                    display: block;
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    background: none;
+                    color: $body-color;
+                    font-size: 16px;
+                    border: 0;
+                    width: 35px;
+                    height: 35px;
+                }
+
+                & span{
+                    width: 8px;
+                    height: 8px;
+                    border-left: 1px solid $black;
+                    border-bottom: 1px solid $black;
+                    @include transform(rotate(-45deg));
+                    position: relative;
+                    top: -5px;
+                }
+            }
+        }
+        
+        &:hover{
+            & > a{
+                color: $theme-color;
+            }
+        }
+        
+        & .sub-menu{
+            position: absolute;
+            top: 120%;
+            left: 0;
+            width: 160px;
+            background-color: $white;
+            border-top: 2px solid $theme-color;
+            opacity: 0;
+            visibility: hidden;
+            @include transition(0.3s);
+            @include box-shadow (0px 10px 25px 0px rgba($black, 0.15));
+            
+            @media #{$md} {
+                position: relative;
+                width: 100%;
+                top: 0;
+                display: none;
+                opacity: 1;
+                visibility: visible;
+                @include box-shadow (none);
+            }
+            @media #{$xs} {
+                position: relative;
+                width: 100%;
+                top: 0;
+                display: none;
+                opacity: 1;
+                visibility: visible;
+                @include box-shadow (none);
+            }
+            
+            & li{
+                position: relative;
+                
+                & a{
+                    padding: 8px 15px;
+                    @include transition(0.3s);
+                    display: block;
+                    color: $heading-color;
+                    
+                    & i{
+                        float: right;
+                    }
+                    
+                    &.active{
+                        color: $theme-color;
+                    }
+                }
+                
+                &:hover{
+                    & > a{
+                        color: $white;
+                        background-color: $theme-color;
+                        
+                        & .sub-nav-toggler{
+                            & span{
+                                border-left-color: $white;
+                                border-bottom-color: $white;
+                            }
+                        }
+                    }
+                }
+                
+                & .sub-menu{
+                    top: -2px;
+                    left: 100%;
+                    
+                    @media #{$md} {
+                        top: 0;
+                        left: 0;
+                        padding-left: 20px;
+                    }
+                    @media #{$xs} {
+                        top: 0;
+                        left: 0;
+                        padding-left: 20px;
+                    }
+                }
+            }
+        }
+        
+        &:hover{
+            & > .sub-menu{
+                opacity: 1;
+                visibility: visible;
+                top: 100%;
+                
+                @media #{$md} {
+                    top: 0;
+                }
+                @media #{$xs} {
+                    top: 0;
+                }
+            }
+        }
+    }
+}
+
+
+.navbar_btn{
+    
+    @media #{$md}{
+        position: absolute;
+        top: 50%;
+        right: 70px;
+        @include transform(translateY(-50%));
+    }
+    @media #{$xs}{
+        position: absolute;
+        top: 50%;
+        right: 70px;
+        @include transform(translateY(-50%));
+    }
+    
+    
+    & .main-btn{
+        height: 40px;
+        line-height: 40px;
+        padding: 0 15px;
+        font-size: 14px;
+        font-weight: 700;
+        
+        & i{
+            margin-right: 5px;
+        }
+    }
+}
+
+
+
+/*===== Header Navbar transparent =====*/
+
+.navbar_transparent{
+    &::before{
+        display: none;
+    }
+    
+    & .navbar{
+        background-color: transparent;
+        padding-left: 0;
+        padding-right: 0;
+    }
+        
+    & .navbar-toggler {
+        & .toggler-icon {
+            background-color: $white;
+        }
+    }
+    
+    & .navbar-nav{
+        margin-right: 10px;
+        
+        & li{
+            & a{
+                color: $white;
+                
+                @media #{$md}{
+                    color: $heading-color;
+                }
+                @media #{$xs}{
+                    color: $heading-color;
+                }
+                
+                &.active{
+                    color: $theme-color;
+                }
+            }
+            &:hover{
+                & > a{
+                    color: $theme-color;
+                }
+            }
+            
+            &:last-child{
+                & .sub-menu{
+                    & li{
+                        & .sub-menu{
+                            left: auto;
+                            right: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    &.sticky{
+        & .navbar-toggler {
+            & .toggler-icon {
+                background-color: $black;
+            }
+        }
+        
+        & .navbar-nav{
+
+            & li{
+                & a{
+                    color: $heading-color;
+                    
+                    &.active{
+                        color: $theme-color;
+                    }
+                }
+                &:hover{
+                    & > a{
+                        color: $theme-color;
+                    }
+                }
+                
+                & .sub-menu{
+                    & li{
+                        & > a{
+                            &.active{
+                                color: $white;
+                                background-color: $theme-color;
+                            }
+                        }
+                        &:hover{
+                            & > a{
+                                color: $white;
+                                background-color: $theme-color;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*===== Header Navbar 3 =====*/
+
+.header_navbar_3{
+    padding-top: 40px;
+    
+    &::before{
+        display: none;
+    }
+    
+    &.sticky{
+        padding-top: 0;
+    }
+}
+
+
+
+
+/*===== Header Navbar 3 =====*/
+
+.header_navbar_4{
+    padding-top: 40px;
+    
+    &::before{
+        display: none;
+    }
+    
+    & .navbar{
+        background-color: $theme-color-2;
+    }
+    
+    & .navbar-toggler {
+        & .toggler-icon {
+            background-color: $white;
+        }
+    }
+    
+    & .navbar-nav{
+        margin-right: 10px;
+        
+        & li{
+            & a{
+                color: $white;
+                
+                @media #{$md}{
+                    color: $heading-color;
+                }
+                @media #{$xs}{
+                    color: $heading-color;
+                }
+                
+                &.active{
+                    color: $theme-color;
+                }
+            }
+            &:hover{
+                & > a{
+                    color: $theme-color;
+                }
+            }
+            
+            &:last-child{
+                & .sub-menu{
+                    & li{
+                        & .sub-menu{
+                            left: auto;
+                            right: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    &.sticky{
+        padding-top: 0;
+        background-color: $theme-color-2;
+    }
+}
+
+
+
+/*===== Header Navbar transparent =====*/
+
+.navbar_transparent_2{
+    &::before{
+        display: none;
+    }
+    
+    & .navbar{
+        background-color: transparent;
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
